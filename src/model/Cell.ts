@@ -12,6 +12,7 @@ class Cell {
             this.options = value;
         } else {
             this.options = [];
+
             for (let i = 0; i < value; i++) {
                 this.options[i] = i;
             }

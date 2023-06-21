@@ -1,0 +1,86 @@
+{
+    "folder": "platformer-industrial-expansion",
+    "path": "tiles/platformer-industrial-expansion",
+    "tiles": [
+        {
+            "name": "tile_empty.png",
+            "constraints": ["ALL", "ALL", "ALL", "ALL"]
+        },
+        {
+            "name": "tile_0017.png",
+            "constraints": [
+                "ALL",
+                "GROUND_BORDER_TOP",
+                "GROUND_BORDER_LEFT",
+                "ALL"
+            ]
+        },
+        {
+            "name": "tile_0018.png",
+            "constraints": [
+                "ALL",
+                "GROUND_BORDER_TOP",
+                "GROUND",
+                "GROUND_BORDER_TOP"
+            ]
+        },
+        {
+            "name": "tile_0019.png",
+            "constraints": [
+                "ALL",
+                "ALL",
+                "GROUND_BORDER_LEFT",
+                "GROUND_BORDER_TOP"
+            ]
+        },
+        {
+            "name": "tile_0033.png",
+            "constraints": [
+                "GROUND_BORDER_LEFT",
+                "GROUND",
+                "GROUND_BORDER_LEFT",
+                "ALL"
+            ]
+        },
+        {
+            "name": "tile_0034.png",
+            "constraints": ["GROUND", "GROUND", "GROUND", "GROUND"]
+        },
+        {
+            "name": "tile_0035.png",
+            "constraints": [
+                "GROUND_BORDER_RIGHT",
+                "ALL",
+                "GROUND_BORDER_RIGHT",
+                "GROUND"
+            ]
+        },
+        {
+            "name": "tile_0049.png",
+            "constraints": [
+                "GROUND_BORDER_LEFT",
+                "GROUND_BORDER_BOTTOM",
+                "BORDER_BOTTOM",
+                "ALL"
+            ]
+        },
+        {
+            "name": "tile_0050.png",
+            "constraints": [
+                "GROUND",
+                "GROUND_BORDER_BOTTOM",
+                "BORDER_BOTTOM",
+                "GROUND_BORDER_BOTTOM"
+            ]
+        },
+        {
+            "name": "tile_0051.png",
+            "constraints": [
+                "GROUND_BORDER_RIGHT",
+                "ALL",
+                "BORDER_BOTTOM",
+                "GROUND_BORDER_BOTTOM"
+            ]
+        }
+    ]
+}

@@ -1,9 +1,7 @@
-import Sketch from "./p5/Sketch";
+import SketchElement from "./sketch/Sketch";
 
 function App() {
-    console.log("Test");
-    // return <Sketch width={1000} height={500} />;
-    return <Sketch />;
+    return <SketchElement />;
 }
 
 export default App;
