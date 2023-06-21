@@ -1,0 +1,9 @@
+#root {
+    position: relative;
+}
+
+#root canvas:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
