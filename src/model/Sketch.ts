@@ -1,16 +1,26 @@
 import Cell from "./Cell";
 import * as p5 from "p5";
-import Tile from "./Tile";
+import Tile, { TileSetJSON } from "./Tile";
 
 class Sketch {
     width: number;
     height: number;
     grid: Cell[];
+    tiles: Tile[];
 
     constructor(width: number, height: number) {
         this.width = width;
         this.height = height;
         this.grid = [];
+        this.tiles = [];
+    }
+
+    public loadTilesFormJSON(json: TileSetJSON): void {
+        try {
+            this.tiles = Tile.getTilesFromJSON(json as TileSetJSON);
+        } catch {
+            this.tiles = [];
+        }
     }
 
     /**
@@ -18,11 +28,13 @@ class Sketch {
      * @param tilesNumber Number of tiles.
      * @returns Cell grid.
      */
-    public createGrid(tilesNumber: number) {
+    public createGrid() {
         this.grid = [];
 
-        for (let i = 0; i < this.getDimension(); i++) {
-            this.grid[i] = new Cell(tilesNumber);
+        if (this.tiles.length > 0) {
+            for (let i = 0; i < this.getDimension(); i++) {
+                this.grid[i] = new Cell(this.tiles.length);
+            }
         }
     }
 
@@ -79,7 +91,7 @@ class Sketch {
 
         if (pick === undefined) {
             // If no tile is available, we rebuild the grid.
-            this.createGrid(emptyCells.length);
+            this.createGrid();
             isNextTileDefined = false;
         } else {
             // The cell now has only one tile, the selected one.
@@ -89,12 +101,12 @@ class Sketch {
         return isNextTileDefined;
     }
 
-    public createNextGrid(tiles: Tile[]) {
+    public createNextGrid() {
         // Construction de la prochaine grille.
         const nextGrid = [];
         for (let line = 0; line < this.height; line++) {
             for (let column = 0; column < this.width; column++) {
-                let index = column + line * this.height;
+                let index = line * this.width + column;
 
                 if (this.grid[index].collapsed) {
                     // Si la cell n'est pas vide, alors on la laisse telle quelle.
@@ -103,17 +115,17 @@ class Sketch {
                     // Si la cell est vide, alors on lui attribue.
 
                     // Création d'un tableau avec les index de toutes les tiles.
-                    let options = new Array(tiles.length)
+                    let options = new Array(this.tiles.length)
                         .fill(0)
                         .map((x, i) => i);
 
                     // UP.
                     if (line > 0) {
-                        let up = this.grid[column + (line - 1) * this.height];
+                        let up = this.grid[(line - 1) * this.width + column];
                         let validOptions: any[] = [];
 
                         for (let option of up.options) {
-                            let valid = tiles[option].down;
+                            let valid = this.tiles[option].down;
                             validOptions = validOptions.concat(valid);
                         }
 
@@ -122,11 +134,11 @@ class Sketch {
 
                     // RIGHT.
                     if (column < this.width - 1) {
-                        let right = this.grid[column + 1 + line * this.height];
+                        let right = this.grid[line * this.width + (column + 1)];
                         let validOptions: any[] = [];
 
                         for (let option of right.options) {
-                            let valid = tiles[option].left;
+                            let valid = this.tiles[option].left;
                             validOptions = validOptions.concat(valid);
                         }
 
@@ -135,11 +147,11 @@ class Sketch {
 
                     // DOWN.
                     if (line < this.height - 1) {
-                        let down = this.grid[column + (line + 1) * this.height];
+                        let down = this.grid[(line + 1) * this.width + column];
                         let validOptions: any[] = [];
 
                         for (let option of down.options) {
-                            let valid = tiles[option].up;
+                            let valid = this.tiles[option].up;
                             validOptions = validOptions.concat(valid);
                         }
 
@@ -148,11 +160,11 @@ class Sketch {
 
                     // LEFT.
                     if (column > 0) {
-                        let left = this.grid[column - 1 + line * this.height];
+                        let left = this.grid[line * this.width + (column - 1)];
                         let validOptions: any[] = [];
 
                         for (let option of left.options) {
-                            let valid = tiles[option].right;
+                            let valid = this.tiles[option].right;
                             validOptions = validOptions.concat(valid);
                         }
 
