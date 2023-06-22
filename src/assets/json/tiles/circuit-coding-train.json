@@ -3,55 +3,55 @@
     "path": "tiles/circuit-coding-train",
     "tiles": [
         {
-            "name": "0.png",
+            "image": "0.png",
             "constraints": ["AAA", "AAA", "AAA", "AAA"]
         },
         {
-            "name": "1.png",
+            "image": "1.png",
             "constraints": ["BBB", "BBB", "BBB", "BBB"]
         },
         {
-            "name": "2.png",
+            "image": "2.png",
             "constraints": ["BBB", "BCB", "BBB", "BBB"]
         },
         {
-            "name": "3.png",
+            "image": "3.png",
             "constraints": ["BBB", "BDB", "BBB", "BDB"]
         },
         {
-            "name": "4.png",
+            "image": "4.png",
             "constraints": ["ABB", "BCB", "BBA", "AAA"]
         },
         {
-            "name": "5.png",
+            "image": "5.png",
             "constraints": ["ABB", "BBB", "BBB", "BBA"]
         },
         {
-            "name": "6.png",
+            "image": "6.png",
             "constraints": ["BBB", "BCB", "BBB", "BCB"]
         },
         {
-            "name": "7.png",
+            "image": "7.png",
             "constraints": ["BDB", "BCB", "BDB", "BCB"]
         },
         {
-            "name": "8.png",
+            "image": "8.png",
             "constraints": ["BDB", "BBB", "BCB", "BBB"]
         },
         {
-            "name": "9.png",
+            "image": "9.png",
             "constraints": ["BCB", "BCB", "BBB", "BCB"]
         },
         {
-            "name": "10.png",
+            "image": "10.png",
             "constraints": ["BCB", "BCB", "BCB", "BCB"]
         },
         {
-            "name": "11.png",
+            "image": "11.png",
             "constraints": ["BCB", "BCB", "BBB", "BBB"]
         },
         {
-            "name": "12.png",
+            "image": "12.png",
             "constraints": ["BBB", "BCB", "BBB", "BCB"]
         }
     ]

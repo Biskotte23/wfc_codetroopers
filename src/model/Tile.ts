@@ -6,6 +6,7 @@ export interface TileSetJSON {
 
 interface TileJSON {
     name: string;
+    image: string;
     constraints: [string, string, string, string];
 }
 
@@ -48,7 +49,7 @@ export default class Tile {
 
             for (let i = 0; i < tilesNumber; i++) {
                 const tile = json.tiles[i];
-                const imagePath = `${path}/${tile.name}`;
+                const imagePath = `${path}/${tile.image}`;
 
                 tiles[i] = new Tile(imagePath, tile.constraints);
             }

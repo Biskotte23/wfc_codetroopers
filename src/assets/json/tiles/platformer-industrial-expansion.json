@@ -3,11 +3,11 @@
     "path": "tiles/platformer-industrial-expansion",
     "tiles": [
         {
-            "name": "tile_empty.png",
+            "image": "tile_empty.png",
             "constraints": ["ALL", "ALL", "ALL", "ALL"]
         },
         {
-            "name": "tile_0017.png",
+            "image": "tile_0017.png",
             "constraints": [
                 "ALL",
                 "GROUND_BORDER_TOP",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "name": "tile_0018.png",
+            "image": "tile_0018.png",
             "constraints": [
                 "ALL",
                 "GROUND_BORDER_TOP",
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "name": "tile_0019.png",
+            "image": "tile_0019.png",
             "constraints": [
                 "ALL",
                 "ALL",
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "name": "tile_0033.png",
+            "image": "tile_0033.png",
             "constraints": [
                 "GROUND_BORDER_LEFT",
                 "GROUND",
@@ -43,11 +43,11 @@
             ]
         },
         {
-            "name": "tile_0034.png",
+            "image": "tile_0034.png",
             "constraints": ["GROUND", "GROUND", "GROUND", "GROUND"]
         },
         {
-            "name": "tile_0035.png",
+            "image": "tile_0035.png",
             "constraints": [
                 "GROUND_BORDER_RIGHT",
                 "ALL",
@@ -56,7 +56,7 @@
             ]
         },
         {
-            "name": "tile_0049.png",
+            "image": "tile_0049.png",
             "constraints": [
                 "GROUND_BORDER_LEFT",
                 "GROUND_BORDER_BOTTOM",
@@ -65,7 +65,7 @@
             ]
         },
         {
-            "name": "tile_0050.png",
+            "image": "tile_0050.png",
             "constraints": [
                 "GROUND",
                 "GROUND_BORDER_BOTTOM",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "name": "tile_0051.png",
+            "image": "tile_0051.png",
             "constraints": [
                 "GROUND_BORDER_RIGHT",
                 "ALL",

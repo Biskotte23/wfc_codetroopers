@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import p5 from "p5";
 import { TileSetJSON } from "../model/Tile";
-import tileSetJSON from "../assets/json/tiles/platformer-industrial-expansion.json";
+import tileSetJSON from "../assets/json/tiles/tiny-town.json";
 import Sketch from "model/Sketch";
 import "./sketch.css";
 
